@@ -5,10 +5,12 @@ public class Enemy {
     // Store their current hp and max hp
     private IntegerProperty hp = new SimpleIntegerProperty();
     private int maxHp;
+    private String imagePath;
 
-    public Enemy(int startingHp) {
+    public Enemy(int startingHp, String imagePath) {
         this.hp.set(startingHp);
         this.maxHp = startingHp;
+        this.imagePath = imagePath;
     }
 
     // Deal with how enemy takes damage safely
@@ -39,6 +41,11 @@ public class Enemy {
     // Check if the enemy is dead
     public boolean isDead() {
         return hp.get() <= 0;
+    }
+
+    // Get the image path
+    public String getImagePath() { 
+        return imagePath; 
     }
 
 

@@ -32,18 +32,18 @@ public class GameView {
 
         // Padding (top, right, bottom, left)
         // This is to get the goldLabel, levelLabel, and expLabel closer to the center pane
-        rootPane.setPadding(new Insets(100, 0, 100, 0));
+        rootPane.setPadding(new Insets(25, 0, 25, 0));
 
         // Center area where the enemy and UI elements will go
         centerStackPane = new StackPane();
-        centerStackPane.setMaxSize(450, 300);
-        centerStackPane.setStyle("-fx-background-color: WHITE; -fx-border-color: BLACK; -fx-border-width: 2;");
+        centerStackPane.setMaxSize(550, 400);
+        centerStackPane.setStyle("-fx-background-color: white; -fx-border-color: BLACK; -fx-border-width: 2;");
         rootPane.setCenter(centerStackPane);
 
         // Enemy image setup on the center stack pane
-        enemyImageView = new ImageView("file:src/images/enemy.png");
+        enemyImageView = new ImageView("file:images/luffy.png");
         enemyImageView.setFitWidth(215);
-        enemyImageView.setFitHeight(175);
+        enemyImageView.setFitHeight(250);
         centerStackPane.getChildren().add(enemyImageView);
 
         // HP Label setup

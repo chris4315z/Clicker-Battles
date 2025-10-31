@@ -7,11 +7,12 @@ public class App extends Application{
     @Override
     public void start(Stage primaryStage) {
         // Set the title of the window
-        primaryStage.setTitle("Clicker Battles");
+        primaryStage.setTitle("One Piece Battle");
 
         // Using the View portion of the MVC to setup the view
         GameModel gameModel = new GameModel();
         GameView gameView = new GameView();
+        // GameController is like the connector between the GameModel and the GameView
         GameController gameController = new GameController(gameModel, gameView);
         Scene scene = gameView.createScene();
   

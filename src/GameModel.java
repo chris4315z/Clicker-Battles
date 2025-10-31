@@ -21,11 +21,15 @@ public class GameModel {
 
     // Current stage
     private IntegerProperty stage = new SimpleIntegerProperty(1);
+    
+    // Store the enemy's image
+    private String imagePath;
 
     // Constructor
     public GameModel() {
-        // Start enemy with 10 HP
-        currentEnemy = new Enemy(10);
+        // Start enemy with 10 HP and as luffy for the first enemy
+        imagePath = "file:images/luffy.png";
+        currentEnemy = new Enemy(10, imagePath);
     }
 
     // --- Core Logic Methods ---
@@ -43,8 +47,22 @@ public class GameModel {
 
             // Go to the next stage and spawn a new enemy
             stage.set(stage.get() + 1);
+
+            // Choose new image per stage (cycle throgh them)
+            String[] enemyImages = {
+                "file:images/luffy.png",
+                "file:images/zoro.png",
+                "file:images/shanks.png"
+            };
+
+            // Easy way of cycling through the index
+            int index = (stage.get() - 1) % enemyImages.length;
+
+            // Add 2 hp to the enemy every stage
             int newEnemyHp = currentEnemy.getMaxHp() + 2;
-            currentEnemy = new Enemy(newEnemyHp);
+
+            // Current enemy is now updated with new hp and new image
+            currentEnemy = new Enemy(newEnemyHp, enemyImages[index]);
         }
     }
 

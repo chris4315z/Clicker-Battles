@@ -1,9 +1,10 @@
 import javafx.beans.binding.Bindings;
+import javafx.scene.image.Image;
 
 public class GameController {
     // Need the GameModel and GameView so they can communicate
-    GameModel gameModel = new GameModel();
-    GameView gameView = new GameView();
+    GameModel gameModel;
+    GameView gameView;
 
     public GameController(GameModel gameModel, GameView gameView) {
         this.gameModel = gameModel;
@@ -33,6 +34,11 @@ public class GameController {
             // Rebind HP when new enemy spawns
             gameView.getHpLabel().textProperty().unbind();
             gameView.getHpLabel().textProperty().bind(gameModel.getCurrentEnemy().hpProperty().asString("HP: %d"));
+
+            // Update the enemy image
+            gameView.getEnemyImageView().setImage(
+                new Image(gameModel.getCurrentEnemy().getImagePath())
+            );
         });
     }
 }

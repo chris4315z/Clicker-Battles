@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.base.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.controls.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.fxml.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.graphics.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.media.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.swing.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx.web.jar",
+        "d:\\Object Oriented Programming Methods\\javafx-sdk-22.0.2\\lib\\javafx-swt.jar"
+    ]
+}
